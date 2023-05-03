@@ -29,7 +29,7 @@ async function mempool(){
             if(tokentoSnipe === tokenAddress){
               console.log('LIQUIDITY DETECTED')
 
-              const swapTx = await contract.OMTHere(
+              const swapTx = await contract.OMTHere( //OMTHere = function to buy on contract
                 routerAddress,
                 wbnbAddress,
                 tokenAddress,
@@ -42,4 +42,7 @@ async function mempool(){
         catch{
             console.log("..........still watching..........")
         }
- 
+        
+    })
+}
+mempool()
